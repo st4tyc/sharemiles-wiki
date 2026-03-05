@@ -15,6 +15,158 @@ Contém o agente de IA **pm-expert-sharemiles**, um Expert Sênior em Product Ma
 
 ---
 
+## Passo a passo por funcionalidade
+
+### Ativar o agente
+
+1. Abra o terminal e navegue até este repositório:
+   ```bash
+   cd sharemiles-wiki
+   claude .
+   ```
+2. No Claude Code, digite:
+   ```
+   /agents
+   ```
+3. Selecione **pm-expert-sharemiles** na lista
+4. O agente inicia automaticamente o protocolo de retomada de sessão
+
+---
+
+### Criar um PRD
+
+1. Ative o agente (passos acima)
+2. Descreva a funcionalidade que deseja documentar — pode ser vaga:
+   ```
+   Quero documentar o fluxo de cancelamento de transação pelo comprador
+   ```
+3. O agente conduz o **protocolo de descoberta**: responda as 7 perguntas
+4. Confirme o entendimento quando o agente apresentar o resumo:
+   ```
+   Pode prosseguir
+   ```
+5. O agente gera o PRD completo e salva automaticamente em `visao-produto/prd-[modulo]-[nome].md`
+
+---
+
+### Criar uma User Story
+
+1. Ative o agente
+2. Especifique a história que deseja:
+   ```
+   Crie uma user story para o vendedor fazer upload do comprovante de transferência
+   ```
+3. O agente confirma o entendimento e gera a história com critérios de aceite Gherkin
+4. O arquivo é salvo em `visao-produto/us-[modulo]-[nome].md`
+
+---
+
+### Mapear a jornada de uma persona
+
+1. Ative o agente
+2. Peça o mapeamento:
+   ```
+   Mapeie a jornada completa do Vendedor desde a criação da listagem até o saque
+   ```
+3. O agente produz o fluxo AS-IS (como é hoje) e propõe o TO-BE se houver problemas a resolver
+4. O arquivo é salvo em `visao-produto/jornada-vendedor.md`
+
+---
+
+### Analisar impacto de uma mudança no produto
+
+1. Ative o agente
+2. Descreva a mudança que foi feita ou que está sendo considerada:
+   ```
+   Estamos pensando em adicionar um prazo de 72h (ao invés de 48h) para o vendedor aprovar a transação
+   ```
+3. O agente mapeia automaticamente todos os impactos: módulos, Firebase Functions, Pagar.me, telas e notificações
+4. Solicite o documento de análise:
+   ```
+   Gere um documento de análise de impacto
+   ```
+
+---
+
+### Atualizar documentação após mudança no código
+
+1. Ative o agente
+2. Informe o que mudou:
+   ```
+   Adicionei o status DISPUTED no TransactionsController. Atualize a documentação afetada.
+   ```
+3. O agente lê o arquivo alterado diretamente no repositório, identifica os documentos impactados e os atualiza
+4. Registra a decisão em `visao-produto/decisoes-produto.md`
+
+---
+
+### Registrar uma decisão de produto
+
+1. Ative o agente
+2. Informe a decisão tomada:
+   ```
+   Decidimos não suportar pagamento por boleto na primeira versão. Registre isso.
+   ```
+3. O agente adiciona a entrada em `visao-produto/decisoes-produto.md` com data e justificativa
+
+---
+
+### Registrar ou resolver um gap
+
+**Registrar gap:**
+1. Ative o agente
+2. Descreva o item em aberto:
+   ```
+   Ainda não decidimos se o comprador pode cancelar uma transação já aprovada pelo vendedor. Registre como gap.
+   ```
+3. O agente adiciona o item em `visao-produto/gaps-e-decisoes-abertas.md`
+
+**Resolver gap:**
+1. Ative o agente
+2. Informe a resolução:
+   ```
+   Decidimos que o comprador NÃO pode cancelar após aprovação do vendedor. Feche o gap.
+   ```
+3. O agente atualiza o status do item e move a decisão para `decisoes-produto.md`
+
+---
+
+### Priorizar o backlog
+
+1. Ative o agente
+2. Liste os itens ou peça uma análise:
+   ```
+   Temos 3 iniciativas em discussão: sistema de avaliações, notificações push e relatório financeiro para o vendedor. Me ajude a priorizar.
+   ```
+3. O agente conduz a análise por impacto, esforço e alinhamento estratégico e documenta em `visao-produto/backlog-macro.md`
+
+---
+
+### Construir a base de conhecimento do produto (primeira vez)
+
+Se `visao-produto/` ainda não existe, siga esta ordem recomendada:
+
+1. Ative o agente — ele detecta que não há arquivos e orienta o início
+2. **Passo 1 — Glossário:**
+   ```
+   Vamos começar pelo glossário da plataforma
+   ```
+3. **Passo 2 — Contexto da plataforma:**
+   ```
+   Agora crie o contexto-plataforma.md
+   ```
+4. **Passo 3 — Mapa de módulos:**
+   ```
+   Crie o mapa-modulos.md com base no que já documentamos
+   ```
+5. **Passo 4 — Personas:**
+   ```
+   Detalhe as personas em personas-detalhadas.md
+   ```
+6. Continue com backlog, decisões e gaps conforme necessário
+
+---
+
 ## Funcionalidades do agente
 
 ### Retomada de sessão automática
