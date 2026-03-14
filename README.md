@@ -2,11 +2,90 @@
 
 Repositório de documentação de produto da plataforma **ShareMiles** — marketplace de milhas aéreas.
 
-Contém o agente de IA **pm-expert-sharemiles**, um Expert Sênior em Product Management treinado no contexto completo da plataforma.
+Contém o agente de IA **pm-expert-sharemiles** e um **MCP Server público** que expõe toda a documentação e capacidades do agente para uso no **Claude Code** e no **GitHub Copilot**.
 
 ---
 
-## Como usar o agente
+## MCP Server — Integração com Claude Code e GitHub Copilot
+
+O servidor MCP expõe a documentação e o agente `pm-expert-sharemiles` como ferramentas padronizadas (Model Context Protocol), compatíveis com qualquer cliente MCP.
+
+### Instalação rápida
+
+```bash
+# 1. Instale as dependências
+cd mcp && npm install
+
+# 2. Compile o TypeScript
+npm run build
+```
+
+### Modo stdio — uso local (Claude Code e GitHub Copilot no VS Code)
+
+**Claude Code** — adicione ao `.claude/mcp.json` do seu projeto ou ao `~/.claude/mcp.json` global:
+
+```json
+{
+  "mcpServers": {
+    "sharemiles-wiki": {
+      "command": "node",
+      "args": ["/caminho/para/sharemiles-wiki/mcp/dist/index.js"],
+      "env": {
+        "WIKI_ROOT": "/caminho/para/sharemiles-wiki"
+      }
+    }
+  }
+}
+```
+
+**GitHub Copilot (VS Code)** — o arquivo `.vscode/mcp.json` já está configurado neste repositório. Basta abrir o projeto no VS Code com a extensão GitHub Copilot instalada.
+
+### Modo HTTP — servidor público remoto
+
+```bash
+# Inicia o servidor HTTP na porta 3000
+cd mcp && npm run start:http
+
+# Porta customizada
+node dist/index.js --http --port 8080
+```
+
+Após iniciar, configure os clientes com a URL:
+
+```json
+{
+  "mcpServers": {
+    "sharemiles-wiki": {
+      "url": "http://seu-servidor:3000/mcp"
+    }
+  }
+}
+```
+
+### Ferramentas disponíveis
+
+| Ferramenta | Descrição |
+|---|---|
+| `list_docs` | Lista todos os documentos da wiki |
+| `read_doc` | Lê um documento pelo caminho relativo |
+| `search_docs` | Busca um termo em toda a documentação |
+| `write_doc` | Cria ou atualiza um documento (PRD, US, etc.) |
+| `get_platform_context` | Retorna contexto completo da plataforma ShareMiles |
+| `get_all_context` | Carrega toda a wiki de uma vez (plataforma, módulos, personas, decisões, gaps) |
+| `get_agent_prompt` | Retorna o system prompt do pm-expert-sharemiles |
+| `analyze_change_impact` | Analisa impacto de uma mudança proposta |
+
+### Recursos MCP (Resources)
+
+Todos os arquivos `.md` da wiki ficam disponíveis como recursos no esquema `sharemiles://docs/{caminho}`.
+
+### Prompt MCP
+
+O prompt `pm_expert_sharemiles` ativa o agente completo com todo o protocolo de descoberta, criação de PRDs e análise de impacto.
+
+---
+
+## Como usar o agente (Claude Code)
 
 1. Abra este repositório no **Claude Code**
 2. Acesse o menu de agentes: `/agents`
