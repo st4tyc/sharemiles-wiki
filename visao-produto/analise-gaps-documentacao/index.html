@@ -1,0 +1,2148 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação de produto da plataforma ShareMiles">
+      
+      
+        <meta name="author" content="ShareMiles Team">
+      
+      
+      
+        <link rel="prev" href="../gaps-e-decisoes-abertas/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Análise de Gaps - ShareMiles Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#analise-de-gaps-de-documentacao-sharemiles" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="ShareMiles Wiki" class="md-header__button md-logo" aria-label="ShareMiles Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ShareMiles Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Análise de Gaps
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../contexto-plataforma/" class="md-tabs__link">
+          
+  
+  
+  Visão de Produto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../jornada-vendedor/" class="md-tabs__link">
+          
+  
+  
+  Jornadas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../backlog-macro/" class="md-tabs__link">
+          
+  
+  
+  Gestão de Produto
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ShareMiles Wiki" class="md-nav__button md-logo" aria-label="ShareMiles Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ShareMiles Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão de Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Visão de Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contexto-plataforma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contexto da Plataforma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapa-modulos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mapa de Módulos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../personas-detalhadas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personas Detalhadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jornadas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Jornadas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jornada-vendedor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jornada do Vendedor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jornada-comprador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jornada do Comprador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão de Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestão de Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backlog-macro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backlog Macro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../decisoes-produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decisões de Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gaps-e-decisoes-abertas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gaps e Decisões Abertas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise de Gaps
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise de Gaps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contexto-da-analise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto da Análise
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-executivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo Executivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categoria-1-gaps-de-produto-funcionalidades-indefinidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Categoria 1 — Gaps de Produto (Funcionalidades Indefinidas)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Categoria 1 — Gaps de Produto (Funcionalidades Indefinidas)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gap-p01-cancelamento-de-transacao-pelo-comprador-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P01: Cancelamento de transação pelo Comprador [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p02-processo-formal-de-disputa-pos-transacao-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P02: Processo formal de disputa pós-transação [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p03-prazo-e-comportamento-de-expiracao-do-qr-code-pix-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P03: Prazo e comportamento de expiração do QR Code PIX [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p04-permissoes-diferenciadas-para-role-agency-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P04: Permissões diferenciadas para role agency [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p05-notificacao-preventiva-de-prazo-de-comprovante-expirando-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P05: Notificação preventiva de prazo de comprovante expirando [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p06-fluxo-de-upgrade-de-role-buyer-seller-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P06: Fluxo de upgrade de role (buyer → seller) [MÉDIA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p07-regras-de-moderacao-de-listagens-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P07: Regras de moderação de listagens [MÉDIA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p08-processo-de-verificacao-de-conta-bancaria-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P08: Processo de verificação de conta bancária [MÉDIA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p09-limites-de-valor-de-saque-minimo-e-maximo-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P09: Limites de valor de saque (mínimo e máximo) [MÉDIA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p10-reembolso-em-disputas-pos-completed-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P10: Reembolso em disputas pós-COMPLETED [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p11-tratamento-de-chargeback-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P11: Tratamento de chargeback [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p12-comportamento-de-listagem-quando-vendedor-e-suspenso-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P12: Comportamento de listagem quando Vendedor é suspenso [MÉDIA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p13-emissao-de-recibos-e-notas-fiscais-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P13: Emissão de recibos e notas fiscais [MÉDIA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p14-retencao-de-ir-na-fonte-sobre-saques-baixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P14: Retenção de IR na fonte sobre saques [BAIXA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p15-politica-de-opt-out-de-notificacoes-baixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P15: Política de opt-out de notificações [BAIXA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categoria-2-gaps-de-documentacao-docs-faltantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Categoria 2 — Gaps de Documentação (Docs Faltantes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Categoria 2 — Gaps de Documentação (Docs Faltantes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gap-d01-contexto-plataformamd-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-D01: contexto-plataforma.md [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-d02-mapa-modulosmd-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-D02: mapa-modulos.md [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-d03-personas-detalhadasmd-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-D03: personas-detalhadas.md [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-d04-backlog-macromd-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-D04: backlog-macro.md [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-d05-decisoes-produtomd-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-D05: decisoes-produto.md [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-d06-gaps-e-decisoes-abertasmd-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-D06: gaps-e-decisoes-abertas.md [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-d07-prds-dos-modulos-principais-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-D07: PRDs dos módulos principais [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categoria-3-gaps-de-processo-operacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Categoria 3 — Gaps de Processo Operacional
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Categoria 3 — Gaps de Processo Operacional">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gap-o01-processo-de-revisao-de-kyc-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-O01: Processo de revisão de KYC [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-o02-sla-de-aprovacao-de-saques-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-O02: SLA de aprovação de saques [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-o03-protocolo-de-resposta-a-disputas-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-O03: Protocolo de resposta a disputas [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-o04-monitoramento-de-saude-da-plataforma-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-O04: Monitoramento de saúde da plataforma [MÉDIA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-o05-processo-de-suspensao-de-usuarios-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-O05: Processo de suspensão de usuários [MÉDIA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-de-acoes-recomendadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo de Ações Recomendadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resumo de Ações Recomendadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imediato-esta-semana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Imediato (esta semana)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curto-prazo-proximas-2-semanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Curto prazo (próximas 2 semanas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medio-prazo-proximo-mes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Médio prazo (próximo mês)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estado-da-documentacao-apos-esta-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado da Documentação Após Esta Sessão
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versões
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contexto-da-analise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto da Análise
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-executivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo Executivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categoria-1-gaps-de-produto-funcionalidades-indefinidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Categoria 1 — Gaps de Produto (Funcionalidades Indefinidas)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Categoria 1 — Gaps de Produto (Funcionalidades Indefinidas)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gap-p01-cancelamento-de-transacao-pelo-comprador-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P01: Cancelamento de transação pelo Comprador [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p02-processo-formal-de-disputa-pos-transacao-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P02: Processo formal de disputa pós-transação [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p03-prazo-e-comportamento-de-expiracao-do-qr-code-pix-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P03: Prazo e comportamento de expiração do QR Code PIX [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p04-permissoes-diferenciadas-para-role-agency-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P04: Permissões diferenciadas para role agency [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p05-notificacao-preventiva-de-prazo-de-comprovante-expirando-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P05: Notificação preventiva de prazo de comprovante expirando [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p06-fluxo-de-upgrade-de-role-buyer-seller-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P06: Fluxo de upgrade de role (buyer → seller) [MÉDIA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p07-regras-de-moderacao-de-listagens-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P07: Regras de moderação de listagens [MÉDIA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p08-processo-de-verificacao-de-conta-bancaria-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P08: Processo de verificação de conta bancária [MÉDIA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p09-limites-de-valor-de-saque-minimo-e-maximo-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P09: Limites de valor de saque (mínimo e máximo) [MÉDIA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p10-reembolso-em-disputas-pos-completed-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P10: Reembolso em disputas pós-COMPLETED [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p11-tratamento-de-chargeback-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P11: Tratamento de chargeback [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p12-comportamento-de-listagem-quando-vendedor-e-suspenso-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P12: Comportamento de listagem quando Vendedor é suspenso [MÉDIA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p13-emissao-de-recibos-e-notas-fiscais-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P13: Emissão de recibos e notas fiscais [MÉDIA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p14-retencao-de-ir-na-fonte-sobre-saques-baixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P14: Retenção de IR na fonte sobre saques [BAIXA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-p15-politica-de-opt-out-de-notificacoes-baixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-P15: Política de opt-out de notificações [BAIXA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categoria-2-gaps-de-documentacao-docs-faltantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Categoria 2 — Gaps de Documentação (Docs Faltantes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Categoria 2 — Gaps de Documentação (Docs Faltantes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gap-d01-contexto-plataformamd-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-D01: contexto-plataforma.md [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-d02-mapa-modulosmd-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-D02: mapa-modulos.md [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-d03-personas-detalhadasmd-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-D03: personas-detalhadas.md [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-d04-backlog-macromd-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-D04: backlog-macro.md [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-d05-decisoes-produtomd-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-D05: decisoes-produto.md [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-d06-gaps-e-decisoes-abertasmd-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-D06: gaps-e-decisoes-abertas.md [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-d07-prds-dos-modulos-principais-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-D07: PRDs dos módulos principais [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categoria-3-gaps-de-processo-operacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Categoria 3 — Gaps de Processo Operacional
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Categoria 3 — Gaps de Processo Operacional">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gap-o01-processo-de-revisao-de-kyc-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-O01: Processo de revisão de KYC [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-o02-sla-de-aprovacao-de-saques-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-O02: SLA de aprovação de saques [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-o03-protocolo-de-resposta-a-disputas-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-O03: Protocolo de resposta a disputas [ALTA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-o04-monitoramento-de-saude-da-plataforma-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-O04: Monitoramento de saúde da plataforma [MÉDIA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-o05-processo-de-suspensao-de-usuarios-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAP-O05: Processo de suspensão de usuários [MÉDIA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-de-acoes-recomendadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo de Ações Recomendadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resumo de Ações Recomendadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imediato-esta-semana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Imediato (esta semana)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curto-prazo-proximas-2-semanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Curto prazo (próximas 2 semanas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medio-prazo-proximo-mes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Médio prazo (próximo mês)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estado-da-documentacao-apos-esta-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado da Documentação Após Esta Sessão
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versões
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="analise-de-gaps-de-documentacao-sharemiles">Análise de Gaps de Documentação — ShareMiles</h1>
+<blockquote>
+<p>Levantamento completo dos gaps identificados na documentação de produto da plataforma ShareMiles.
+Versão: 1.0 | Data: 2026-03-14</p>
+</blockquote>
+<hr />
+<h2 id="contexto-da-analise">Contexto da Análise</h2>
+<p>Esta análise foi realizada em 2026-03-14 com base em:
+- Leitura do agente de produto (<code>pm-expert-sharemiles.md</code>)
+- Estado inicial do repositório (apenas <code>glossario.md</code> existia)
+- Conhecimento do domínio da plataforma ShareMiles</p>
+<p>O objetivo é catalogar todos os gaps de documentação encontrados, classificados por criticidade, para guiar as próximas iniciativas de documentação e desenvolvimento.</p>
+<hr />
+<h2 id="resumo-executivo">Resumo Executivo</h2>
+<table>
+<thead>
+<tr>
+<th>Categoria</th>
+<th>Total identificado</th>
+<th>Alta prioridade</th>
+<th>Média prioridade</th>
+<th>Baixa prioridade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gaps de produto (funcionalidades indefinidas)</td>
+<td>15</td>
+<td>5</td>
+<td>6</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Gaps de documentação (docs faltantes)</td>
+<td>7</td>
+<td>4</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Gaps de processo operacional</td>
+<td>5</td>
+<td>3</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>27</strong></td>
+<td><strong>12</strong></td>
+<td><strong>11</strong></td>
+<td><strong>4</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="categoria-1-gaps-de-produto-funcionalidades-indefinidas">Categoria 1 — Gaps de Produto (Funcionalidades Indefinidas)</h2>
+<p>Estes gaps representam funcionalidades ou comportamentos do produto que ainda não foram especificados. Impactam diretamente o desenvolvimento e a operação.</p>
+<h3 id="gap-p01-cancelamento-de-transacao-pelo-comprador-alta">GAP-P01: Cancelamento de transação pelo Comprador [ALTA]</h3>
+<p><strong>Módulos:</strong> M3, M4
+<strong>Descrição:</strong> Não há especificação de se o Comprador pode cancelar uma transação após o pagamento, enquanto ainda está em <code>PENDING_SELLER_APPROVAL</code>. Este é um gap de alta criticidade porque afeta diretamente o fluxo de reembolso e a experiência do Comprador.</p>
+<p><strong>Impacto se não resolvido:</strong>
+- Compradores que se arrependem ficam presos na transação
+- Possível aumento de chargebacks (Comprador contesta diretamente com a operadora)
+- Falta de clareza na documentação do fluxo de cancelamento</p>
+<p><strong>Opções:</strong> Ver [GAP-01] em <code>gaps-e-decisoes-abertas.md</code></p>
+<hr />
+<h3 id="gap-p02-processo-formal-de-disputa-pos-transacao-alta">GAP-P02: Processo formal de disputa pós-transação [ALTA]</h3>
+<p><strong>Módulos:</strong> M3, M8
+<strong>Descrição:</strong> Não existe um fluxo documentado para disputas entre Comprador e Vendedor. O que acontece quando o Comprador alega não ter recebido as milhas após a transação ser marcada como <code>COMPLETED</code>?</p>
+<p><strong>Impacto se não resolvido:</strong>
+- Disputas resolvidas ad hoc sem rastreabilidade
+- Risco legal para a plataforma (intermediadora sem processo de resolução)
+- Possíveis chargebacks não gerenciados</p>
+<p><strong>Opções:</strong> Ver [GAP-02] em <code>gaps-e-decisoes-abertas.md</code></p>
+<hr />
+<h3 id="gap-p03-prazo-e-comportamento-de-expiracao-do-qr-code-pix-alta">GAP-P03: Prazo e comportamento de expiração do QR Code PIX [ALTA]</h3>
+<p><strong>Módulos:</strong> M5, M3
+<strong>Descrição:</strong> O prazo de validade do QR Code PIX gerado pela <code>ShareMilesPixApi</code> não está documentado. O comportamento quando expira sem pagamento também está indefinido.</p>
+<p><strong>Impacto se não resolvido:</strong>
+- Transações em <code>PENDING</code> indefinidamente
+- Compradores que tentam pagar após expiração recebem erro sem explicação
+- Acúmulo de transações zumbis no banco de dados</p>
+<hr />
+<h3 id="gap-p04-permissoes-diferenciadas-para-role-agency-alta">GAP-P04: Permissões diferenciadas para role <code>agency</code> [ALTA]</h3>
+<p><strong>Módulos:</strong> M1, M2, M3
+<strong>Descrição:</strong> O role <code>agency</code> existe no código mas não há especificação do que o diferencia do role <code>seller</code>.</p>
+<p><strong>Impacto se não resolvido:</strong>
+- Agências usando a mesma interface de Vendedor individual sem funcionalidades adequadas ao volume
+- Impossibilidade de documentar a persona Agência com precisão</p>
+<hr />
+<h3 id="gap-p05-notificacao-preventiva-de-prazo-de-comprovante-expirando-alta">GAP-P05: Notificação preventiva de prazo de comprovante expirando [ALTA]</h3>
+<p><strong>Módulos:</strong> M7, M3
+<strong>Descrição:</strong> A plataforma cancela automaticamente a transação se o Vendedor não enviar o comprovante em 48h, mas não há evidência de que um aviso preventivo seja enviado (ex: com 12h de antecedência).</p>
+<p><strong>Impacto se não resolvido:</strong>
+- Vendedores perdem o prazo sem perceber
+- Cancelamentos automáticos desnecessários
+- Insatisfação do Vendedor, potencial abandono da plataforma</p>
+<hr />
+<h3 id="gap-p06-fluxo-de-upgrade-de-role-buyer-seller-media">GAP-P06: Fluxo de upgrade de role (buyer → seller) [MÉDIA]</h3>
+<p><strong>Módulos:</strong> M1
+<strong>Descrição:</strong> Um usuário Comprador que deseja começar a vender milhas precisa de um fluxo para alterar seu role. A DP-07 (um role por usuário) implica que seria necessário criar uma nova conta, mas isso não está comunicado ao usuário.</p>
+<hr />
+<h3 id="gap-p07-regras-de-moderacao-de-listagens-media">GAP-P07: Regras de moderação de listagens [MÉDIA]</h3>
+<p><strong>Módulos:</strong> M2, M8
+<strong>Descrição:</strong> Não estão definidos os critérios de moderação: preço mínimo/máximo por milha, quantidade mínima/máxima, prazos de análise pelo Admin.</p>
+<hr />
+<h3 id="gap-p08-processo-de-verificacao-de-conta-bancaria-media">GAP-P08: Processo de verificação de conta bancária [MÉDIA]</h3>
+<p><strong>Módulos:</strong> M6
+<strong>Descrição:</strong> A entidade <code>BankAccount</code> tem campo <code>verified</code>, mas o processo de verificação não está especificado.</p>
+<hr />
+<h3 id="gap-p09-limites-de-valor-de-saque-minimo-e-maximo-media">GAP-P09: Limites de valor de saque (mínimo e máximo) [MÉDIA]</h3>
+<p><strong>Módulos:</strong> M6
+<strong>Descrição:</strong> Não há definição de valor mínimo de saque (economicamente viável) nem máximo (compliance).</p>
+<hr />
+<h3 id="gap-p10-reembolso-em-disputas-pos-completed-alta">GAP-P10: Reembolso em disputas pós-COMPLETED [ALTA]</h3>
+<p><strong>Módulos:</strong> M3, M4, M8
+<strong>Descrição:</strong> Quando uma disputa é resolvida a favor do Comprador após <code>COMPLETED</code> (e o pagamento já capturado), qual é o fluxo? O prazo de reembolso do gateway pode ter expirado.</p>
+<hr />
+<h3 id="gap-p11-tratamento-de-chargeback-alta">GAP-P11: Tratamento de chargeback [ALTA]</h3>
+<p><strong>Módulos:</strong> M4, M3, M6
+<strong>Descrição:</strong> Não há fluxo documentado para chargebacks iniciados pelo Comprador na operadora do cartão, especialmente para transações em que o Vendedor já recebeu o saldo (após D+30).</p>
+<hr />
+<h3 id="gap-p12-comportamento-de-listagem-quando-vendedor-e-suspenso-media">GAP-P12: Comportamento de listagem quando Vendedor é suspenso [MÉDIA]</h3>
+<p><strong>Módulos:</strong> M1, M2, M3
+<strong>Descrição:</strong> O que acontece com as listagens ativas e transações em andamento quando o Admin suspende um Vendedor?</p>
+<hr />
+<h3 id="gap-p13-emissao-de-recibos-e-notas-fiscais-media">GAP-P13: Emissão de recibos e notas fiscais [MÉDIA]</h3>
+<p><strong>Módulos:</strong> M3
+<strong>Descrição:</strong> Não está definido se a plataforma emite recibo/NF para Compradores e Vendedores.</p>
+<hr />
+<h3 id="gap-p14-retencao-de-ir-na-fonte-sobre-saques-baixa">GAP-P14: Retenção de IR na fonte sobre saques [BAIXA]</h3>
+<p><strong>Módulos:</strong> M6
+<strong>Descrição:</strong> Obrigatoriedade de retenção de Imposto de Renda na fonte para saques acima de determinado valor não está avaliada.</p>
+<hr />
+<h3 id="gap-p15-politica-de-opt-out-de-notificacoes-baixa">GAP-P15: Política de opt-out de notificações [BAIXA]</h3>
+<p><strong>Módulos:</strong> M7, M1
+<strong>Descrição:</strong> Usuários não têm controle sobre quais notificações recebem. LGPD pode exigir controle para comunicações não-essenciais.</p>
+<hr />
+<h2 id="categoria-2-gaps-de-documentacao-docs-faltantes">Categoria 2 — Gaps de Documentação (Docs Faltantes)</h2>
+<p>Estes gaps representam documentos que deveriam existir mas ainda não foram criados.</p>
+<h3 id="gap-d01-contexto-plataformamd-alta">GAP-D01: <code>contexto-plataforma.md</code> [ALTA]</h3>
+<p><strong>Status:</strong> CRIADO nesta sessão (2026-03-14)
+<strong>Descrição:</strong> Visão geral estratégica da plataforma, premissas e arquitetura funcional.</p>
+<h3 id="gap-d02-mapa-modulosmd-alta">GAP-D02: <code>mapa-modulos.md</code> [ALTA]</h3>
+<p><strong>Status:</strong> CRIADO nesta sessão (2026-03-14)
+<strong>Descrição:</strong> Mapeamento de todos os módulos com entidades, controllers e serviços.</p>
+<h3 id="gap-d03-personas-detalhadasmd-alta">GAP-D03: <code>personas-detalhadas.md</code> [ALTA]</h3>
+<p><strong>Status:</strong> CRIADO nesta sessão (2026-03-14)
+<strong>Descrição:</strong> Detalhamento profundo de cada persona.</p>
+<h3 id="gap-d04-backlog-macromd-alta">GAP-D04: <code>backlog-macro.md</code> [ALTA]</h3>
+<p><strong>Status:</strong> CRIADO nesta sessão (2026-03-14)
+<strong>Descrição:</strong> Épicos e iniciativas priorizadas.</p>
+<h3 id="gap-d05-decisoes-produtomd-alta">GAP-D05: <code>decisoes-produto.md</code> [ALTA]</h3>
+<p><strong>Status:</strong> CRIADO nesta sessão (2026-03-14)
+<strong>Descrição:</strong> Log de decisões tomadas com justificativas.</p>
+<h3 id="gap-d06-gaps-e-decisoes-abertasmd-alta">GAP-D06: <code>gaps-e-decisoes-abertas.md</code> [ALTA]</h3>
+<p><strong>Status:</strong> CRIADO nesta sessão (2026-03-14)
+<strong>Descrição:</strong> Lista de itens bloqueantes e decisões em aberto.</p>
+<h3 id="gap-d07-prds-dos-modulos-principais-alta">GAP-D07: PRDs dos módulos principais [ALTA]</h3>
+<p><strong>Status:</strong> A criar
+<strong>Descrição:</strong> Não há nenhum PRD documentado para os módulos M3 (Transações), M4 (Pagamento), M5 (PIX) e M6 (Carteira e Saques) — os mais críticos da plataforma.</p>
+<p><strong>Documentos a criar (por ordem de prioridade):</strong>
+1. <code>prd-transacoes-fluxo-principal.md</code> — Fluxo completo de criação à conclusão
+2. <code>prd-transacoes-cancelamento-reembolso.md</code> — Fluxo de cancelamento e reembolso
+3. <code>prd-pagamento-cartao-credito.md</code> — Pre-autorização e captura
+4. <code>prd-pix-pagamento-webhook.md</code> — Fluxo PIX com webhook
+5. <code>prd-carteira-saques.md</code> — Saldo, D+30 e saques
+6. <code>prd-usuarios-kyc.md</code> — Verificação de identidade</p>
+<hr />
+<h2 id="categoria-3-gaps-de-processo-operacional">Categoria 3 — Gaps de Processo Operacional</h2>
+<p>Estes gaps afetam como a equipe operacional gerencia a plataforma.</p>
+<h3 id="gap-o01-processo-de-revisao-de-kyc-alta">GAP-O01: Processo de revisão de KYC [ALTA]</h3>
+<p><strong>Módulos:</strong> M1, M8
+<strong>Descrição:</strong> O processo de revisão de documentos KYC pelo Admin não está documentado: critérios de aprovação/rejeição, prazo esperado de análise, notificação ao Vendedor sobre o resultado.</p>
+<p><strong>Impacto:</strong> Inconsistência na aprovação de KYC, Vendedores sem expectativa de prazo.</p>
+<hr />
+<h3 id="gap-o02-sla-de-aprovacao-de-saques-alta">GAP-O02: SLA de aprovação de saques [ALTA]</h3>
+<p><strong>Módulos:</strong> M6, M8
+<strong>Descrição:</strong> Não há SLA definido para aprovação de saques pelo Admin. O Vendedor não tem expectativa de quando receberá após solicitar o saque.</p>
+<p><strong>Impacto:</strong> Insatisfação do Vendedor, aumento de tickets de suporte.</p>
+<hr />
+<h3 id="gap-o03-protocolo-de-resposta-a-disputas-alta">GAP-O03: Protocolo de resposta a disputas [ALTA]</h3>
+<p><strong>Módulos:</strong> M3, M8
+<strong>Descrição:</strong> Não há protocolo documentado para o Admin resolver disputas entre Comprador e Vendedor: critérios de decisão, documentação requerida, prazos.</p>
+<hr />
+<h3 id="gap-o04-monitoramento-de-saude-da-plataforma-media">GAP-O04: Monitoramento de saúde da plataforma [MÉDIA]</h3>
+<p><strong>Módulos:</strong> M8
+<strong>Descrição:</strong> Não há definição de quais métricas o Admin monitora diariamente e quais são os alertas configurados para situações anormais (ex: muitas transações em timeout, volume incomum de cancelamentos).</p>
+<hr />
+<h3 id="gap-o05-processo-de-suspensao-de-usuarios-media">GAP-O05: Processo de suspensão de usuários [MÉDIA]</h3>
+<p><strong>Módulos:</strong> M1, M8
+<strong>Descrição:</strong> Não está documentado o processo para suspender ou banir usuários: critérios, aprovações necessárias, impacto nas transações em andamento.</p>
+<hr />
+<h2 id="resumo-de-acoes-recomendadas">Resumo de Ações Recomendadas</h2>
+<h3 id="imediato-esta-semana">Imediato (esta semana)</h3>
+<ol>
+<li>Resolver GAP-P01 (cancelamento pelo Comprador) — decisão de produto, sem desenvolvimento</li>
+<li>Resolver GAP-P03 (expiração do QR Code PIX) — verificar implementação existente</li>
+<li>Resolver GAP-P05 (alerta preventivo de prazo) — pequena Firebase Function</li>
+</ol>
+<h3 id="curto-prazo-proximas-2-semanas">Curto prazo (próximas 2 semanas)</h3>
+<ol>
+<li>Criar PRD do fluxo de disputa (GAP-P02, GAP-P10)</li>
+<li>Documentar permissões do role <code>agency</code> (GAP-P04)</li>
+<li>Definir SLA de aprovação de saques (GAP-O02)</li>
+<li>Criar <code>prd-transacoes-fluxo-principal.md</code></li>
+</ol>
+<h3 id="medio-prazo-proximo-mes">Médio prazo (próximo mês)</h3>
+<ol>
+<li>Criar PRDs dos módulos M3, M4, M5, M6 (GAP-D07)</li>
+<li>Definir processo de moderação de listagens (GAP-P07)</li>
+<li>Documentar processo de KYC (GAP-O01)</li>
+<li>Criar PRD para sistema de disputas (GAP-P02)</li>
+</ol>
+<hr />
+<h2 id="estado-da-documentacao-apos-esta-sessao">Estado da Documentação Após Esta Sessão</h2>
+<table>
+<thead>
+<tr>
+<th>Arquivo</th>
+<th>Status antes</th>
+<th>Status após</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>glossario.md</code></td>
+<td>Existia</td>
+<td>Mantido</td>
+</tr>
+<tr>
+<td><code>contexto-plataforma.md</code></td>
+<td>Não existia</td>
+<td>Criado</td>
+</tr>
+<tr>
+<td><code>mapa-modulos.md</code></td>
+<td>Não existia</td>
+<td>Criado</td>
+</tr>
+<tr>
+<td><code>personas-detalhadas.md</code></td>
+<td>Não existia</td>
+<td>Criado</td>
+</tr>
+<tr>
+<td><code>backlog-macro.md</code></td>
+<td>Não existia</td>
+<td>Criado</td>
+</tr>
+<tr>
+<td><code>decisoes-produto.md</code></td>
+<td>Não existia</td>
+<td>Criado</td>
+</tr>
+<tr>
+<td><code>gaps-e-decisoes-abertas.md</code></td>
+<td>Não existia</td>
+<td>Criado</td>
+</tr>
+<tr>
+<td><code>jornada-comprador.md</code></td>
+<td>Não existia</td>
+<td>Criado</td>
+</tr>
+<tr>
+<td><code>jornada-vendedor.md</code></td>
+<td>Não existia</td>
+<td>Criado</td>
+</tr>
+<tr>
+<td><code>analise-gaps-documentacao.md</code></td>
+<td>Não existia</td>
+<td>Criado (este arquivo)</td>
+</tr>
+<tr>
+<td>PRDs dos módulos</td>
+<td>Nenhum existia</td>
+<td>Pendente</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="historico-de-versoes">Histórico de Versões</h2>
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Alteração</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2026-03-14</td>
+<td>Criação do documento de análise inicial</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
