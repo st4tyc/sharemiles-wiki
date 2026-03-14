@@ -1,25 +1,23 @@
 site_name: ShareMiles Wiki
 site_description: Documentação de produto da plataforma ShareMiles
 site_author: ShareMiles Team
-docs_dir: .
-exclude_docs: |
-  .github/
-  .claude/
-  .gitignore
+docs_dir: docs
+custom_dir: overrides
 
 theme:
   name: material
   language: pt-BR
+  custom_dir: overrides
   palette:
     - scheme: default
-      primary: indigo
-      accent: blue
+      primary: deep-purple
+      accent: purple
       toggle:
         icon: material/brightness-7
         name: Modo escuro
     - scheme: slate
-      primary: indigo
-      accent: blue
+      primary: deep-purple
+      accent: purple
       toggle:
         icon: material/brightness-4
         name: Modo claro
@@ -31,12 +29,23 @@ theme:
     - search.highlight
     - content.code.copy
 
+extra_css:
+  - stylesheets/extra.css
+
 plugins:
   - search:
       lang: pt
 
+copyright: "&copy; 2025 ShareMiles. Todos os direitos reservados."
+
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://sharemiles.com.br
+      name: sharemiles.com.br
+
 nav:
-  - Início: README.md
+  - Início: index.md
   - Visão de Produto:
     - Contexto da Plataforma: visao-produto/contexto-plataforma.md
     - Mapa de Módulos: visao-produto/mapa-modulos.md

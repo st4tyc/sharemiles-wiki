@@ -1,0 +1,81 @@
+{% extends "main.html" %}
+
+{% block tabs %}
+{{ super() }}
+
+<div class="sm-hero">
+  <h1>ShareMiles Wiki</h1>
+  <p>Documentação de produto da plataforma de marketplace de milhas aéreas</p>
+  <div class="sm-hero__buttons">
+    <a href="visao-produto/contexto-plataforma/" class="md-button md-button--primary">
+      Explorar documentação
+    </a>
+    <a href="visao-produto/mapa-modulos/" class="md-button" style="color:white; border-color: rgba(255,255,255,0.5);">
+      Ver módulos
+    </a>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="md-typeset">
+
+  <div class="sm-cards">
+    <a href="visao-produto/contexto-plataforma/" class="sm-card">
+      <div class="sm-card__icon">🏗️</div>
+      <h3>Contexto da Plataforma</h3>
+      <p>Visão geral, stack tecnológica e entidades principais da ShareMiles.</p>
+    </a>
+
+    <a href="visao-produto/mapa-modulos/" class="sm-card">
+      <div class="sm-card__icon">🗺️</div>
+      <h3>Mapa de Módulos</h3>
+      <p>Arquitetura dos 8 módulos principais: Listagens, Transações, Pagamentos e mais.</p>
+    </a>
+
+    <a href="visao-produto/personas-detalhadas/" class="sm-card">
+      <div class="sm-card__icon">👤</div>
+      <h3>Personas</h3>
+      <p>Perfis detalhados dos usuários: Comprador, Vendedor, Agência e Admin.</p>
+    </a>
+
+    <a href="visao-produto/glossario/" class="sm-card">
+      <div class="sm-card__icon">📖</div>
+      <h3>Glossário</h3>
+      <p>Termos e definições do domínio de milhas e da plataforma.</p>
+    </a>
+
+    <a href="visao-produto/jornada-comprador/" class="sm-card">
+      <div class="sm-card__icon">🛒</div>
+      <h3>Jornada do Comprador</h3>
+      <p>Fluxo AS-IS e TO-BE da experiência de compra de milhas.</p>
+    </a>
+
+    <a href="visao-produto/jornada-vendedor/" class="sm-card">
+      <div class="sm-card__icon">💼</div>
+      <h3>Jornada do Vendedor</h3>
+      <p>Fluxo AS-IS e TO-BE da experiência de venda de milhas.</p>
+    </a>
+
+    <a href="visao-produto/backlog-macro/" class="sm-card">
+      <div class="sm-card__icon">📋</div>
+      <h3>Backlog Macro</h3>
+      <p>Épicos e iniciativas priorizadas para evolução do produto.</p>
+    </a>
+
+    <a href="visao-produto/decisoes-produto/" class="sm-card">
+      <div class="sm-card__icon">✅</div>
+      <h3>Decisões de Produto</h3>
+      <p>Registro das decisões estratégicas tomadas (DP-01 a DP-09+).</p>
+    </a>
+
+    <a href="visao-produto/gaps-e-decisoes-abertas/" class="sm-card">
+      <div class="sm-card__icon">🔍</div>
+      <h3>Gaps e Decisões Abertas</h3>
+      <p>Pontos em aberto, bloqueios e decisões pendentes.</p>
+    </a>
+  </div>
+
+</div>
+{% endblock %}
