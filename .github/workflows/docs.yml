@@ -24,5 +24,11 @@ jobs:
       - name: Instalar dependências
         run: pip install mkdocs-material
 
+      - name: Preparar pasta docs
+        run: |
+          mkdir -p docs
+          cp README.md docs/index.md
+          cp -r visao-produto docs/visao-produto
+
       - name: Publicar no GitHub Pages
         run: mkdocs gh-deploy --force

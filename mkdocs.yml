@@ -1,11 +1,7 @@
 site_name: ShareMiles Wiki
 site_description: Documentação de produto da plataforma ShareMiles
 site_author: ShareMiles Team
-docs_dir: .
-exclude_docs: |
-  .github/
-  .claude/
-  .gitignore
+docs_dir: docs
 
 theme:
   name: material
@@ -36,7 +32,7 @@ plugins:
       lang: pt
 
 nav:
-  - Início: README.md
+  - Início: index.md
   - Visão de Produto:
     - Contexto da Plataforma: visao-produto/contexto-plataforma.md
     - Mapa de Módulos: visao-produto/mapa-modulos.md
