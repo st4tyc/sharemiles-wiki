@@ -1,0 +1,155 @@
+/* ShareMiles Brand Colors */
+:root {
+  --sm-purple: #6B21A8;
+  --sm-purple-light: #9333EA;
+  --sm-purple-dark: #4C1D95;
+  --sm-accent: #A855F7;
+  --sm-white: #FFFFFF;
+  --sm-gray-light: #F5F3FF;
+}
+
+/* Primary color overrides */
+[data-md-color-primary="deep-purple"] {
+  --md-primary-fg-color: var(--sm-purple);
+  --md-primary-fg-color--light: var(--sm-purple-light);
+  --md-primary-fg-color--dark: var(--sm-purple-dark);
+}
+
+/* Header */
+.md-header {
+  background: linear-gradient(135deg, var(--sm-purple-dark) 0%, var(--sm-purple) 60%, var(--sm-purple-light) 100%);
+  box-shadow: 0 2px 12px rgba(107, 33, 168, 0.25);
+}
+
+/* Navigation tabs */
+.md-tabs {
+  background: var(--sm-purple-dark);
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: var(--sm-accent) !important;
+}
+
+/* Sidebar active link */
+.md-nav__link--active {
+  color: var(--sm-purple) !important;
+  font-weight: 600;
+}
+
+/* Buttons */
+.md-button--primary {
+  background-color: var(--sm-purple) !important;
+  border-color: var(--sm-purple) !important;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.md-button--primary:hover {
+  background-color: var(--sm-purple-light) !important;
+  border-color: var(--sm-purple-light) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(107, 33, 168, 0.3);
+}
+
+.md-button {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+/* Search bar */
+.md-search__input {
+  border-radius: 8px;
+}
+
+/* Hero section (landing page) */
+.sm-hero {
+  background: linear-gradient(135deg, var(--sm-purple-dark) 0%, var(--sm-purple) 60%, var(--sm-purple-light) 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+  color: var(--sm-white);
+  margin: -1.2rem -1.6rem 2rem;
+}
+
+.sm-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--sm-white) !important;
+}
+
+.sm-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: var(--sm-white) !important;
+}
+
+.sm-hero .sm-hero__buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sm-hero .md-button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+}
+
+/* Cards grid */
+.sm-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.sm-card {
+  background: var(--sm-white);
+  border: 1px solid #E9D5FF;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: all 0.2s ease;
+  display: block;
+  box-shadow: 0 1px 4px rgba(107, 33, 168, 0.08);
+}
+
+.sm-card:hover {
+  border-color: var(--sm-purple-light);
+  box-shadow: 0 6px 20px rgba(107, 33, 168, 0.15);
+  transform: translateY(-2px);
+}
+
+.sm-card__icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.sm-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--sm-purple-dark) !important;
+  margin: 0 0 0.5rem;
+}
+
+.sm-card p {
+  font-size: 0.9rem;
+  color: #6B7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Footer */
+.md-footer {
+  background: var(--sm-purple-dark);
+}
+
+.md-footer-meta {
+  background: var(--sm-purple-dark);
+}

@@ -32,9 +32,10 @@ jobs:
 
       - name: Preparar pasta docs
         run: |
-          mkdir -p docs
-          cp README.md docs/index.md
+          mkdir -p docs/stylesheets
+          cp home.md docs/index.md
           cp -r visao-produto docs/visao-produto
+          cp -r stylesheets/. docs/stylesheets/
 
       - name: Build do site
         run: mkdocs build --strict
