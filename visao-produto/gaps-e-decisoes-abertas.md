@@ -29,7 +29,7 @@ Bloqueio: [Sim/Não — indica se bloqueia desenvolvimento de outro item]
 ### [GAP-01] Cancelamento de transação pelo Comprador antes da aprovação do Vendedor
 
 Data de identificação: 2026-03-14
-Status: Aberto
+Status: Resolvido — ver DP-08
 Módulos afetados: M3, M4
 Impacto: Alto
 Bloqueio: Sim (bloqueia documentação do fluxo completo de cancelamento)
@@ -81,7 +81,7 @@ Bloqueio: Sim (bloqueia documentação de fluxo de exceção de transação)
 ### [GAP-03] Prazo de expiração do QR Code PIX
 
 Data de identificação: 2026-03-14
-Status: Aberto
+Status: Resolvido — ver DP-09
 Módulos afetados: M5, M3
 Impacto: Alto
 Bloqueio: Sim (bloqueia documentação completa do fluxo PIX)
@@ -306,7 +306,31 @@ Bloqueio: Não (mas crítico para saúde financeira)
 
 ## Gaps Resolvidos
 
-*Nenhum gap resolvido ainda — documento criado em 2026-03-14.*
+### [GAP-01] Cancelamento de transação pelo Comprador antes da aprovação do Vendedor
+
+Data de identificação: 2026-03-14
+Data de resolução: 2026-03-14
+Status: Resolvido — ver DP-08
+Módulos afetados: M3, M4, M5, M7
+Decisão correspondente: DP-08
+
+**Resumo da resolução:** O Comprador pode cancelar uma transação somente enquanto `sellerApprovalStatus = PENDING` e dentro de 24h após a confirmação do pagamento. A janela de cancelamento é encerrada imediatamente se o Vendedor aprovar antes do prazo. Reembolso integral sem taxa. O fluxo de reembolso varia conforme o `gatewayStatus` no momento do cancelamento: pré-autorização não capturada usa `CancelAsync`; pagamento capturado (cartão ou PIX) usa `RefundAsync`.
+
+**Situação de implementação:** Decisão tomada em nível de produto. Aguarda implementação técnica.
+
+---
+
+### [GAP-03] Prazo de expiração do QR Code PIX
+
+Data de identificação: 2026-03-14
+Data de resolução: 2026-03-14
+Status: Resolvido — ver DP-09
+Módulos afetados: M3, M5, M7
+Decisão correspondente: DP-09
+
+**Resumo da resolução:** O Comprador pode regenerar o QR Code PIX após expiração, com prazo total de 24h desde a criação da transação e limite de 3 regenerações. Esgotado o prazo ou as tentativas, a transação é cancelada automaticamente sem movimentação financeira (nenhum pagamento foi capturado). O cancelamento voluntário pelo Comprador antes do pagamento também encerra a transação sem reembolso. A transação só avança para `PENDING_SELLER_APPROVAL` após confirmação do pagamento via webhook (`gatewayStatus = paid`).
+
+**Situação de implementação:** Decisão tomada em nível de produto. Aguarda implementação técnica. Há pendências técnicas a verificar antes do início do desenvolvimento — ver seção "Pendências para implementação" na DP-09.
 
 ---
 
@@ -315,3 +339,4 @@ Bloqueio: Não (mas crítico para saúde financeira)
 | Versão | Data | Alteração |
 |---|---|---|
 | 1.0 | 2026-03-14 | Criação do documento com gaps identificados na análise inicial |
+| 1.1 | 2026-03-14 | GAP-01 e GAP-03 marcados como resolvidos (DP-08 e DP-09); adição de entradas na seção Gaps Resolvidos |

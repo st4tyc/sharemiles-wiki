@@ -190,8 +190,82 @@ Tomada por: Time técnico
 
 ---
 
+### [DP-08] Cancelamento de transação pelo Comprador limitado à janela pré-aprovação com prazo de 24h
+
+Data: 2026-03-14
+Status: Ativa — aguarda implementação
+Módulos afetados: M3, M4, M5, M7
+Tomada por: Time de produto
+
+**Contexto:** Após o pagamento ser processado, o Comprador pode se arrepender da compra antes que o Vendedor tenha se comprometido com a transferência de milhas. Sem uma saída formal dentro da plataforma, o Comprador recorre ao chargeback diretamente na operadora do cartão.
+
+**Decisão:** O Comprador pode cancelar uma transação se, e somente se, as duas condições forem atendidas simultaneamente:
+1. `sellerApprovalStatus = PENDING` (o Vendedor ainda não aprovou nem rejeitou)
+2. O cancelamento ocorre dentro de 24h a partir da confirmação do pagamento
+
+Se o Vendedor aprovar a transação antes das 24h, o Comprador perde a janela de cancelamento imediatamente. Reembolso integral, sem taxa.
+
+**Fluxo por método de pagamento:**
+- Cartão pré-autorizado (`gatewayStatus = pre_authorized`): operação `CancelAsync` no gateway
+- Cartão capturado (`gatewayStatus = paid`): operação `RefundAsync` no gateway
+- PIX (`gatewayStatus = paid`): operação `RefundAsync` no gateway
+
+**Alternativas rejeitadas:**
+- Cancelamento sem prazo: rejeitado por não dar previsibilidade ao Vendedor
+- Cancelamento com taxa: rejeitado nesta fase; pode ser reavaliado se houver evidência de abuso
+- Cancelamento após aprovação do Vendedor: rejeitado — transferências de milhas são irreversíveis
+
+**Nota de implementação:** Feature depende da resolução do GAP-03 para comportamento consistente em transações PIX com pagamento demorado.
+
+---
+
+### [DP-09] Regeneração de QR Code PIX com prazo total de 24h e cancelamento automático por esgotamento
+
+Data: 2026-03-14
+Status: Ativa — aguarda implementação
+Módulos afetados: M3, M5, M7
+Tomada por: Time de produto
+
+**Contexto:** QR Codes PIX têm prazo de validade. Se o Comprador não paga dentro do prazo do QR Code, a transação ficaria em `PENDING` indefinidamente sem desfecho, bloqueando a listagem do Vendedor e criando estados zumbi no sistema.
+
+**Decisão:** Adotar a seguinte política para transações PIX com QR Code expirado:
+
+1. O Comprador pode regenerar o QR Code após a expiração, sem necessidade de criar uma nova transação.
+2. Fica estabelecido um prazo total máximo de 24 horas contados desde a criação da transação para que o pagamento PIX seja confirmado, independentemente de quantos QR Codes foram gerados.
+3. Dentro desse prazo de 24h, o Comprador pode regenerar o QR Code até 3 (três) vezes.
+4. Se o prazo total de 24h expirar sem pagamento confirmado, ou se o Comprador esgotar as 3 tentativas sem pagar, a transação é cancelada automaticamente. Não há movimentação financeira neste cancelamento, pois nenhum pagamento foi capturado.
+5. O Comprador pode encerrar voluntariamente a transação a qualquer momento enquanto `gatewayStatus != paid`. Essa ação é denominada **cancelamento pelo Comprador**, não "rejeição" (termo reservado à ação do Vendedor sobre `sellerApprovalStatus`). Como não há pagamento capturado, não há reembolso — a transação é simplesmente encerrada.
+6. A aprovação da transação para o Vendedor (avanço para `PENDING_SELLER_APPROVAL`) só ocorre após a confirmação do pagamento pelo webhook PIX, ou seja, quando `gatewayStatus = paid`. O Vendedor nunca visualiza nem age sobre uma transação com pagamento PIX pendente.
+
+**Fluxo técnico de regeneração (a verificar na implementação):**
+- A regeneração de QR Code implica a criação de uma nova cobrança PIX via `ShareMilesPixApi`, com atualização do `gatewayChargeId` na entidade `Transaction`.
+- O webhook de confirmação de pagamento deve sempre referenciar o `gatewayChargeId` mais recente. Cobranças antigas (QR Codes expirados) não devem acionar transição de status.
+- Uma nova Firebase Function de monitoramento (`checkPixPaymentDeadline` ou equivalente) deve monitorar transações PIX em `PENDING` e acionar o cancelamento automático ao atingir o limite de 24h ou 3 tentativas.
+
+**Justificativa das escolhas:**
+- Prazo de 24h: amplo o suficiente para que o Comprador resolva imprevistos, sem bloquear a listagem do Vendedor por período excessivo.
+- Limite de 3 regenerações: previne uso do QR Code como mecanismo de reserva de listagem sem intenção de pagamento.
+- Cancelamento sem reembolso quando `gatewayStatus != paid`: correto do ponto de vista financeiro — não há captura, logo não há valor a devolver.
+
+**Alternativas rejeitadas:**
+- Cancelamento automático na primeira expiração (Opção A do GAP-03): rejeitado por penalizar Compradores com imprevistos pontuais e aumentar abandono de transação.
+- QR Code com validade de 24h sem regeneração (Opção B do GAP-03): rejeitado por manter transações abertas por longo período sem mecanismo de controle.
+- Regenerações ilimitadas sem prazo total: rejeitado por criar estados zumbi e bloquear listagens indefinidamente.
+
+**Restrições criadas:**
+- Transações PIX têm um ciclo de vida máximo de 24h na fase `PENDING`. Após isso, são encerradas independentemente da vontade do Comprador.
+- O `gatewayChargeId` da `Transaction` pode mudar ao longo do ciclo de vida da transação PIX — implementações que assumem imutabilidade deste campo devem ser revisadas.
+
+**Pendências para implementação:**
+- Verificar se o `PagarmeProxyService` suporta criação de nova cobrança PIX vinculada a uma order existente, ou se é necessário criar uma nova order.
+- Definir o comportamento da `ShareMilesPixApi` para invalidar cobranças PIX anteriores ao emitir uma nova para a mesma transação.
+- Confirmar com o time técnico o nome e a lógica da Firebase Function responsável pelo monitoramento do prazo de 24h.
+
+---
+
 ## Histórico de Versões
 
 | Versão | Data | Alteração |
 |---|---|---|
 | 1.0 | 2026-03-14 | Criação do documento com decisões identificadas retroativamente |
+| 1.1 | 2026-03-14 | Adição de DP-08 (cancelamento pelo Comprador) e DP-09 (regeneração de QR Code PIX) |
