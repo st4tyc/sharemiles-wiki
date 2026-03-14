@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "sharemiles-wiki": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/mcp/dist/index.js"],
+      "env": {
+        "WIKI_ROOT": "${workspaceFolder}"
+      }
+    }
+  }
+}

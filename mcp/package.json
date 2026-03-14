@@ -1,0 +1,36 @@
+{
+  "name": "@sharemiles/mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server público para a Wiki do ShareMiles — Especialista em Product Management",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "sharemiles-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "start:http": "node dist/index.js --http",
+    "start:http:port": "node dist/index.js --http --port",
+    "dev": "tsx src/index.ts",
+    "dev:http": "tsx src/index.ts --http"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sharemiles",
+    "product-management",
+    "miles-marketplace"
+  ]
+}
