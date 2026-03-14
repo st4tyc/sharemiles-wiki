@@ -1,0 +1,52 @@
+site_name: ShareMiles Wiki
+site_description: Documentação de produto da plataforma ShareMiles
+site_author: ShareMiles Team
+docs_dir: .
+exclude_docs: |
+  .github/
+  .claude/
+  .gitignore
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Modo escuro
+    - scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: pt
+
+nav:
+  - Início: README.md
+  - Visão de Produto:
+    - Contexto da Plataforma: visao-produto/contexto-plataforma.md
+    - Mapa de Módulos: visao-produto/mapa-modulos.md
+    - Personas Detalhadas: visao-produto/personas-detalhadas.md
+    - Glossário: visao-produto/glossario.md
+  - Jornadas:
+    - Jornada do Vendedor: visao-produto/jornada-vendedor.md
+    - Jornada do Comprador: visao-produto/jornada-comprador.md
+  - Gestão de Produto:
+    - Backlog Macro: visao-produto/backlog-macro.md
+    - Decisões de Produto: visao-produto/decisoes-produto.md
+    - Gaps e Decisões Abertas: visao-produto/gaps-e-decisoes-abertas.md
+    - Análise de Gaps: visao-produto/analise-gaps-documentacao.md

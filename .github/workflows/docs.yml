@@ -1,0 +1,28 @@
+name: Publicar Documentação
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Instalar dependências
+        run: pip install mkdocs-material
+
+      - name: Publicar no GitHub Pages
+        run: mkdocs gh-deploy --force
